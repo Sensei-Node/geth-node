@@ -39,3 +39,4 @@ If you are running the geth node on your local network, you can add it to your m
 ## Resources
 - Official Geth client installation https://geth.ethereum.org/docs/install-and-build/installing-geth
 - API docs: https://geth.ethereum.org/docs/rpc/server
+- Connect Node to Metamask: https://metamask.zendesk.com/hc/en-us/articles/360015290012 
