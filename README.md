@@ -32,6 +32,10 @@ Check docker logs to see the block_height
 
     docker logs --tail 100 ethereum
 
+## Adding local node to metamask
+
+If you are running the geth node on your local network, you can add it to your metamask changing networks to "localhost 8545", if you are running on a virtual machine you can add the IP to your trusted networks, make sure to have 8545 port opened.
+
 ## Resources
 - Official Geth client installation https://geth.ethereum.org/docs/install-and-build/installing-geth
 - API docs: https://geth.ethereum.org/docs/rpc/server
