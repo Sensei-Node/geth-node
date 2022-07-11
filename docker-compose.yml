@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  geth:
+    image: ethereum/client-go:stable
+    container_name: ethereum
+    restart: unless-stopped
+    ports:
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "8545:8545"
+      - "8551:8551" #engine api
+    volumes:
+      - ./eth:/var/lib/goethereum
+    command:
+      - --http
+      - --http.addr=0.0.0.0
+      - --http.port=8545
+      - --port=30303
+      - --syncmode=snap
+      - --http.corsdomain=*
+      - --http.vhosts=*
+      - --http.api="engine,eth,web3,net,debug"
+      - --datadir=/var/lib/goethereum
+      - --authrpc.jwtsecret=/var/lib/goethereum/jwtsecret # only needed for validators setup
